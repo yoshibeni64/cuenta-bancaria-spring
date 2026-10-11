@@ -37,7 +37,7 @@ public class CajeroAutomatico {
     private final Clock reloj;
 
     public CajeroAutomatico(RepositorioCuentas repositorio,
-                            ServicioAntifraude antifraude,
+                            @Qualifier("antifraudeEstricto") ServicioAntifraude antifraude,
                             Notificador notificador, Clock reloj) {
         this.repositorio = repositorio;
         this.antifraude = antifraude;
